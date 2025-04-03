@@ -1,61 +1,77 @@
-# Energy Consumption Analysis in YAFS
+# Energy Consumption Analysis using YAFS
 
 ## Overview
-This repository provides an energy consumption analysis using the **YAFS** (Yet Another Fog Simulator) framework. The simulation results are stored in `results/energy_consumption.csv`, capturing power usage across different components in a fog computing environment.
+This project analyzes energy consumption using the **Yet Another Fog Simulator (YAFS)** framework. It simulates and evaluates energy efficiency in distributed computing environments such as fog and edge computing.
+
+## Features
+- **Energy Consumption Analysis:** Simulates and records energy usage in distributed systems.
+- **Customizable Parameters:** Modify configurations for different simulation scenarios.
+- **Results Visualization:** Generates energy consumption reports and insights.
+- **Streamlit Deployment:** Interactive web-based dashboard to visualize results.
 
 ## Installation
-To use this repository, ensure you have Python 3.9+ and install the required dependencies:
+To set up and run the project, follow these steps:
 
-```sh
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
+```
+
+### 2. Install Dependencies
+Make sure you have Python 3.9 or higher installed. Then, run:
+```bash
 pip install -r requirements.txt
 ```
 
-Alternatively, install YAFS directly from GitHub:
-
-```sh
-pip install git+https://github.com/acsicuib/YAFS@YAFS3#egg=yafs
-```
-
-## Running the Simulation
-Execute the following command to start the simulation:
-
-```sh
+### 3. Run the Simulation
+```bash
 python main.py
 ```
+This will generate the output file `results/energy_consumption.csv`.
 
-This will generate energy consumption data, which is saved in:
+## Usage
+After running the simulation, analyze the energy consumption data stored in `results/energy_consumption.csv`. You can visualize the data using Python or upload it to the Streamlit app for better insights.
 
-```
-results/energy_consumption.csv
-```
+## Deploying on Streamlit
+You can visualize the results using Streamlit. To do this:
 
-## Energy Consumption Analysis
-The `energy_consumption.csv` file contains structured data for analyzing power usage in the fog environment. The typical structure includes:
-
-| Timestamp | Node ID | Energy Consumed (Joules) |
-|-----------|--------|------------------|
-| 0.1       | 1      | 0.5              |
-| 0.2       | 2      | 0.7              |
-| 0.3       | 3      | 1.2              |
-
-### Visualizing Energy Data
-To plot the energy consumption trends, use:
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-df = pd.read_csv('results/energy_consumption.csv')
-plt.plot(df['Timestamp'], df['Energy Consumed (Joules)'])
-plt.xlabel('Time (s)')
-plt.ylabel('Energy (Joules)')
-plt.title('Energy Consumption Over Time')
-plt.show()
+### 1. Install Streamlit
+```bash
+pip install streamlit
 ```
 
-## Contributing
-Feel free to submit issues and pull requests to improve the energy consumption analysis in YAFS.
+### 2. Run the Streamlit App
+```bash
+streamlit run app.py
+```
+
+### 3. Deploy on Streamlit Cloud
+To deploy the app online using Streamlit Cloud:
+- Push your code to GitHub.
+- Go to [Streamlit Cloud](https://share.streamlit.io/).
+- Connect your GitHub repository and deploy the `app.py` file.
+
+## File Structure
+```
+📂 your-repo/
+├── 📁 results/                  # Output results
+│   ├── energy_consumption.csv   # Energy consumption data
+├── main.py                      # Simulation script
+├── app.py                       # Streamlit dashboard
+├── requirements.txt              # Dependencies
+├── README.md                     # Project documentation
+```
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the **Apache 2.0 License**. See the `LICENSE` file for details.
+
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## Contact
+For any questions or support, reach out via email or GitHub issues.
+
+---
+**Happy Coding! 🚀**
 
