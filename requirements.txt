@@ -1,4 +1,8 @@
-streamlit
-matplotlib
-pandas
-yafs
+ 
+    streamlit
+    pandas
+    matplotlib
+    yafs
+    numpy
+    networkx
+    
